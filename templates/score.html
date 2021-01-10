@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCUFree-Score</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>课程名</th>
+            <th>属性</th>
+            <th>学分</th>
+            <th>成绩</th>
+            <th>绩点</th>
+            <th>排名</th>
+            <th>最高成绩</th>
+            <th>最低成绩</th>
+            <th>平均成绩</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{ i['课程名'] }}</td>
+                <td>{{ i['属性'] }}</td>
+                <td>{{ i['学分'] }}</td>
+                <td>{{ i['成绩'] }}</td>
+                <td>{{ i['绩点'] }}</td>
+                <td>{{ i['排名'] }}</td>
+                <td>{{ i['最高成绩'] }}</td>
+                <td>{{ i['最低成绩'] }}</td>
+                <td>{{ i['平均成绩'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
